@@ -1,0 +1,114 @@
+config.GetList() returns { "configname", "configname2" }
+config.Save(name)
+config.Load(name)
+config.Remove(name)
+m_flLandingRatio
+m_flSpeedFraction
+m_flSpeedFactor
+m_flMaxBodyYawDegrees
+TraceToExit()
+PointOutsideWorld()
+EspBuilder:GetAlpha
+entitiy:GetDesyncDelta()
+Entity:SetViewAngles( x, y, z )
+gui.EnableScreenClicker( boolean enable )
+gui.SetOverride("var", val)
+gui.SetOverride("var", false)
+GuiObject:SetTextColor(r,g,b,a)
+gui.Editbox( parent, varname, value, text) 
+gui.Text( parent, text, r, g, b )
+GuiObject:SetFocused()
+lua_MyCustomText:SetText( text, r, g, b )
+lua_MyCustomText:SetDescription( text, r, g, b )
+Cliprect:pop() - to remove cliprects.
+Clipboard access for import, export features
+ClipboardData:get(), ClipboardData:put(...);
+UserCmd:SetPitch and GetRunningScripts
+UserCmd:SetTickCount( tick )
+client.Create_Interface(dll_module, interface_version)
+IVDebugOverlay
+http.Get
+http post
+Websocket support
+entity.SetDormant
+AnimState Class"
+Input.Emulate( Key ) --Smilulate a key being pressed
+local buttonArray = input.ButtonsDown()
+GameEvent SetString/SetInt/SetFloat
+engine.TraceLine( src:Vector3, dst:Vector3, mask:integer )
+ignore: Entity
+io library
+window= gui.Window("Window1", "My Window", 0, 0, 500, 500)
+gui.Tab(window, "tab1", "awesome tab")
+gui.Image(reference, url or .png, width, height, x, y)
+draw.Gradient(x1, y1, x2, y2, col1, col2, horizontal : boolean) : void
+cheat.SetAntiAimRight() -- sets angles to the anti aim right direction (for manual aa's)
+cheat.SetAntiAimLeft() -- read above
+cheat.SetResolverAngle(EulerAngles) -- bruteforce resolver because im full
+cheat.SetPeeking(boolean) -- make it so we can tell the fakelag we are currently peeking
+textures inside gui.Custom
+some type of built in cryptolib like Base64, AES or MD5, Since making those functions in lua is extremely slow.
+GuiObject:GetSize() / GetBound?
+GuiObject:SetCallback() returns integer, string, boolean when ever a GuiObject value was changed
+access to IEffects, IViewRenderBeams and GlowObjectManager
+3d rendering api (boxes, wireframe boxes, models etc)
+ability to draw 2d elements(ex. draw.FilledRect) in 3d space
+Make client.GetConVar output a integer anywhere it can and not a string bcs the majority of convars are just numbers
+wait(5)
+print("waited 5 seconds before printing this")
+function: change CViewSetup .x, .y, .z
+possible to use fontflags trough lua
+access to debugoverlay so we can draw 3d boxes and lines
+-This function returns aimbot target before ragebot fires
+rbot.preFire(target, hitgroup, hitchance, damage)
+target -- Returns entity index of target
+hitgroup -- Returns hitgroup that the aimbot will shoot at
+hitchance -- Returns hitchance that the aimbot calculated
+damage -- Returns damage that the aimbot calculated
+-Returns informations of shots that ragebot hit
+rbot.Hit(target, hitgroup, hitchance, backtrack, damage, damage_s, x, y, z)
+target -- Returns entity index of target
+hitgroup-- Returns hitgroup that the aimbot hit
+hitchance -- Returns hitchance that the aimbot calculated
+backtrack -- Returns true if target was backtracked else false
+damage -- Returns damage that the aimbot calculated
+damage_s -- Returns actual damage that server registered for the shot
+x, y, z -- XYZ position of the target
+-Returns informations of shots that ragebot missed
+rbot.Miss(target, hitgroup, hitchance, backtrack, damage, x, y, z)
+get chat string from uid [/li]
+RadarBuilder callback that can control what entities should be drawn in radar, and give ability to change color of dots in radar.
+http.Fetch & http.Post (like in gLua eg @ wiki.garrysmod.com)
+PlayerInfo Api
+Input.IsCapsOn()
+More access to engine functions (like getting cvars, latency, lowerbody angles)
+Ability to change text size, font and weight (bold, light, regular.etc, should be dynamic based on the font)
+Ability to import custom text fonts (would be a good idea combined with the http library for downloading them in the first place)
+Ability to hook onto cheat-specific events, like when the aimbot shoots, changes targets, even UI element value changes, the more the better
+Ability to set the value of checkboxes, edit boxes, and dynamically fill the combo box elements' contents by using a table where the key is the name the end-user sees on the GUI and value is the value returned via the API
+Ability to retrieve the port of which the current game server is running on.
+Ability to get/set friend option from pList ( using SteamID or name, possibly using wildcards i.e. all friends have ¢ in name, ignore all players with that character, or clantags, etc )
+Ability to interact with the player list,adding buttons to it, or at least being able to check who you have as priority / friendly.
+Ability to know when the cheat uses autodirection and in which side it is active.
+Ability to read input from the aimware console
+Being able to set settings per player, like visuals or legitbot settings, this would go well with the previous suggestion to be able to set different settings based on priority on the playerlist, or for simpler things like health based chams
+Responsive group box elements
+Ability to draw debug models and hitboxes https://imgur.com/6b2iyLY
+It would be nice to have a function which returns an array containing the names of all the available config vars.
+AimbotTarget callback should also return the angles it pretends to aim at or the absOrigin it pretends to aim at
+E:SetProp only accepts two arguments as of now so doing E:SetProp("a", "b", 25) isn't possible
+Animstate class to resolver builder
+Allow access to resolver and anti-aim api
+get tickbase & get simulation time
+read netvars properly , change font and size
+RadarBuilder callback that can control what entities should be drawn in radar, and give ability to change color of dots in radar.
+grab the forum username of the current user to store as a variable
+a way to convert tables to json & vice versa
+Being able to reference the Skin changer Window
+allow us to get the direction the player is looking at with his mouse, which can differ from the real and fake angles.
+access to gradients in surface
+The events player_chat and player_say are only triggered on non-dedicated servers.
+Make gui.Text automatically break a new line instead of having it go out of the menu
+have a function to check if certain vguiPanel is visible
+Pitch Editing
+Access to the fake model would be cool.
